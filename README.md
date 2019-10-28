@@ -1,6 +1,6 @@
-<h1>Stravovací systém OU pomocí Web Socket</h1>
+<h1>Web Socket</h1>
 <p>
-  Stravovací systém Ostravské univerzity s použitím technologie Web Socket ve webovém prostředí PHP.
+  Vytvoření jednoduché aplikace klient - server s použitím technologie Web Socket ve webovém prostředí PHP.
 </p>
 
 <h2>Hlavní součásti</h2>

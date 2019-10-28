@@ -3,7 +3,7 @@
 <html lang="cs">
     <head>
         <meta charset="UTF-8">
-        <title>Stravovací Systém Ostravské univerzity</title>
+        <title>Web Sockets</title>
     </head>
     <body>
         <form method="post">

@@ -45,7 +45,7 @@ if ($server = socket_create(AF_INET, SOCK_STREAM, 0)) {
                             die("Žádná odchozí data!\n");
                         }
 
-                        // Rozšíření pro ukončení serveru a spojení
+                        // Rozšíření pro okamžité uzavření serveru a ukončení spojení
                         if ($reply === "stop") {
                             exit;
                         }

@@ -1,4 +1,4 @@
-<h1>WebSocket</h1>
+<h1>WebSockets</h1>
 <p>
     Demonstrační aplikace klient / server s použitím technologie WebSocket v prostředí PHP.
 </p>

@@ -16,34 +16,35 @@
                     </td>
                 </tr>
                 <?php
-                // Detaily komunikujícího klienta
-                $host = "127.0.0.1";
-                $port = "20205";
+                    // Detaily komunikujícího klienta
+                    $host = "127.0.0.1";
+                    $port = "20205";
 
-                // Akce po zmáčknutí tlačítka
-                if (isset($_POST['send'])) {
-                    $msg = $_POST['msg'];
+                    // Akce po zmáčknutí tlačítka
+                    if (isset($_POST['send'])) {
+                        $msg = $_POST['msg'];
 
-                    // Vytvoření nového připojení k serveru
-                    if ($server = socket_create(AF_INET, SOCK_STREAM, 0)) {
+                        // Vytvoření nového připojení k serveru
+                        if ($server = socket_create(AF_INET, SOCK_STREAM, 0)) {
 
-                        // Zahájení připojení k serveru
-                        if (socket_connect($server, $host, $port)) {
+                            // Zahájení připojení k serveru
+                            if (socket_connect($server, $host, $port)) {
 
-                            $reply = ":> Odpověď serveru: ";
-                            $reply .= trim(socket_read($server, 1024));
+                                // Odeslání zprávy klienta na server
+                                if (!socket_write($server, $msg, strlen($msg))) {
+                                    die("Žádná odchozí data!\n");
+                                }
 
-                            // Odeslání zprávy klienta na server
-                            if (!socket_write($server, $msg, strlen($msg))) {
-                                die("Žádná odchozí data!\n");
+                                $reply = ":> Odpověď serveru: ";
+                                $reply .= trim(socket_read($server, 1024));
+
+                            } else {
+                                die("Připojení k serveru selhalo!\n");
                             }
                         } else {
-                            die("Připojení k serveru selhalo!\n");
+                            die("Vytvoření počátečního bodu selhalo!\n");
                         }
-                    } else {
-                        die("Vytvoření počátečního bodu selhalo!\n");
                     }
-                }
                 ?>
                 <tr>
                     <td>

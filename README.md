@@ -1,6 +1,6 @@
 <h1>WebSocket</h1>
 <p>
-    Primitivní aplikace klient / server s použitím technologie WebSocket v prostředí PHP.
+    Demonstrační aplikace pro návrh klient / server s použitím technologie WebSocket v prostředí PHP.
 </p>
 
 <h2>Hlavní součásti</h2>
@@ -63,14 +63,14 @@
 <p>
     Klietským modulem je soubor: "<strong>client.php</strong>".
     Pro jeho spuštění využijeme balíček XAMPP, který má ve svém domovském adresáři složku "<strong>htdocs</strong>", do které stačí soubor "<strong>client.php</strong>" přesunout.
-    Do běžného webového prohlížeče poté stačí zadat adresu: <a href="http://localhost/client.php" target="_blank">http://localhost/client.php</a> a komunikace mezi klientem a serverem může začít!
+    Do běžného webového prohlížeče poté stačí zadat adresu: <a href="http://localhost/client.php" target="_blank"><strong>http://localhost/client.php</strong></a> a komunikace mezi klientem a serverem může začít!
 </p>
 
 <h2>Princip komunikace</h2>
 <p>
     Aktivní server vždy jako první čeká na nové připojení klienta.
     Samovolně v základu nikomu nic nerozesílá ani neprovádí žádné další aktivity na pozadí.
-    Klient navazuje spojení se serverem v okamžiku, kdy spustíme / navštívíme adresu <a href="http://localhost/client.php" target="_blank">http://localhost/client.php</a>.
+    Klient navazuje spojení se serverem v okamžiku, kdy spustíme / navštívíme adresu <a href="http://localhost/client.php" target="_blank"><strong>http://localhost/client.php</strong></a>.
     Klient začíná komunikaci vždy jako první. Odešle zprávu na server a poté čeká na jeho odpověď.
     V případě, že je k serveru připojeno více klientů a všichni čekají na odpověď, obsluhuje jejich požadavky server postupně podle vlastní fronty čekatelů.
 </p>

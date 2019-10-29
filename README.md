@@ -1,6 +1,6 @@
-<h1>Web Socket</h1>
+<h1>WebSocket</h1>
 <p>
-  Vytvoření jednoduché aplikace klient - server s použitím technologie Web Socket ve webovém prostředí PHP.
+  Primitivní aplikace klient / server s použitím technologie WebSocket v prostředí PHP.
 </p>
 
 <h2>Hlavní součásti</h2>
@@ -9,7 +9,7 @@
   <dd>- Windows script pro rychlé spuštění serveru na lokálním počítači s nasloucháním na daném portu.</dd>
   <dt>server.php</dt>
   <dd>- Soubor s hlavním serverem, který je spouštěn v režimu příkazového řádku.</dd>
-  <dt>klient.php</dt>
+  <dt>client.php</dt>
   <dd>- Soubor s jednoduchou klientskou částí pro zasílání zpráv na server.</dd>
 </dl>
 
@@ -42,7 +42,7 @@
 <div>
   <p>
     Při opětovném pokusu o spuštění serveru se pravděpodobně objeví chyba, že Socket nebylo možné vytvořit.<br>
-    Tento problém způsobuje fakt, že je ve výchozím PHP nastavení Web Socket bráno jako rozšíření, které je potřeba povolit:    
+    Tento problém způsobuje fakt, že je ve výchozím PHP nastavení WebSocket bráno jako rozšíření, které je potřeba povolit:    
   </p>
   <ol>
     <li>Přejdeme do domovského adresáře PHP</li>
@@ -60,10 +60,10 @@
 <h2>Klient</h2>
 <h3>Spuštění klienta</h3>
 <p>
-  Klietským modulem je soubor: "<strong>klient.php</strong>". Pro jeho spuštění využijeme balíček XAMPP, který má ve svém domovském adresáři složku "<strong>htdocs</strong>", do které stačí soubor "<strong>klient.php</strong>" přesunout. Do běžného webového prohlížeče poté stačí zadat adresu: <a href="http://localhost/klient.php" title="Stravovací systém Ostravské univerzity" target="_blank">http://localhost/klient.php</a> a komunikace mezi klientem a serverem může začít!
+  Klietským modulem je soubor: "<strong>client.php</strong>". Pro jeho spuštění využijeme balíček XAMPP, který má ve svém domovském adresáři složku "<strong>htdocs</strong>", do které stačí soubor "<strong>client.php</strong>" přesunout. Do běžného webového prohlížeče poté stačí zadat adresu: <a href="http://localhost/client.php" title="Stravovací systém Ostravské univerzity" target="_blank">http://localhost/client.php</a> a komunikace mezi klientem a serverem může začít!
 </p>
 
 <h2>Princip komunikace</h2>
 <p>
-  Aktivní server vždy jako první čeká na nové připojení klienta. Samovolně v základu nikomu nic nerozesílá ani neprovádí žádné další aktivity na pozadí. Klient navazuje spojení se serverem v okamžiku, kdy spustíme/navštívíme adresu <a href="http://localhost/klient.php" title="Stravovací systém Ostravské univerzity" target="_blank">http://localhost/klient.php</a>. Klient začíná komunikaci vždy jako první. Odešle zprávu na server a poté čeká na jeho odpověď. V případě, že je k serveru připojeno více klientů a všichni čekají na odpověď, obsluhuje jejich požadavky server postupně podle vlastní fronty čekatelů.
+  Aktivní server vždy jako první čeká na nové připojení klienta. Samovolně v základu nikomu nic nerozesílá ani neprovádí žádné další aktivity na pozadí. Klient navazuje spojení se serverem v okamžiku, kdy spustíme/navštívíme adresu <a href="http://localhost/client.php" title="Stravovací systém Ostravské univerzity" target="_blank">http://localhost/client.php</a>. Klient začíná komunikaci vždy jako první. Odešle zprávu na server a poté čeká na jeho odpověď. V případě, že je k serveru připojeno více klientů a všichni čekají na odpověď, obsluhuje jejich požadavky server postupně podle vlastní fronty čekatelů.
 </p>

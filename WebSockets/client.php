@@ -3,7 +3,7 @@
 <html lang="cs">
     <head>
         <meta charset="UTF-8">
-        <title>Web Sockets</title>
+        <title>WebSocket</title>
     </head>
     <body>
         <form method="post">

@@ -1,6 +1,6 @@
 <h1>WebSocket</h1>
 <p>
-    Demonstrační aplikace pro návrh klient / server s použitím technologie WebSocket v prostředí PHP.
+    Demonstrační aplikace klient / server s použitím technologie WebSocket v prostředí PHP.
 </p>
 
 <h2>Hlavní součásti</h2>
